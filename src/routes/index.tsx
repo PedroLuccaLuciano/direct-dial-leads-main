@@ -108,7 +108,7 @@ const servicos = [
   { icon: TreeDeciduous, image: podaAltura.url, title: "Poda de árvores em Joinville", text: "Poda técnica em qualquer altura com cesto aéreo e caminhão munck, inclusive próximo à rede elétrica.", }, 
   
   { icon: Leaf, image: rocada.url, title: "Roçada de terrenos", text: "Roçada em Joinville e Araquari: lotes, chácaras, condomínios e áreas industriais.", }, 
-  { icon: Recycle, image: limpeza.url, title: "Limpeza e retirada de resíduos", text: "Recolhimento de galhos, troncos e entulho vegetal, com a área entregue varrida e organizada.", }, 
+  { icon: Recycle, image: podaEscalada.url, title: "Limpeza e retirada de resíduos", text: "Recolhimento de galhos, troncos e entulho vegetal, com a área entregue varrida e organizada.", }, 
 ];
 const provaSocial = [
   { icon: BadgeCheck, title: "Empresa registrada", text: `CNPJ ${COMPANY.cnpj}` },
