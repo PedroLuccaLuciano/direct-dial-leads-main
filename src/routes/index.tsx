@@ -475,52 +475,7 @@ function Index() {
           </div>
         </section>
 
-        {/* DIFERENCIAIS */}
-        <section id="diferenciais" className="bg-secondary py-24">
-          <div className="mx-auto max-w-6xl px-4">
-            <header className="max-w-2xl">
-              <p className="text-sm font-bold uppercase tracking-widest text-accent">
-                Diferenciais
-              </p>
-              <h2 className="mt-2 text-3xl font-extrabold text-primary sm:text-4xl">
-                Empresa séria, equipe organizada, serviço seguro
-              </h2>
-            </header>
-
-            <div className="mt-12 grid items-center gap-12 lg:grid-cols-2">
-              <ul className="grid gap-6 sm:grid-cols-2">
-                {diferenciais.map((d) => (
-                  <li
-                    key={d.title}
-                    className="rounded-2xl bg-card p-7 shadow-card transition-transform duration-300 hover:-translate-y-1"
-                  >
-                    <span className="grid size-12 place-items-center rounded-xl bg-accent/10">
-                      <d.icon aria-hidden="true" className="size-6 text-accent" />
-                    </span>
-                    <h3 className="mt-4 text-lg font-bold text-primary">{d.title}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">{d.text}</p>
-                  </li>
-                ))}
-              </ul>
-
-              <img
-                src={equipe.url}
-                alt="Equipe da RS Munck e Poda uniformizada ao lado do caminhão munck em serviço"
-                width={900}
-                height={1200}
-                loading="lazy"
-                decoding="async"
-                className="h-80 w-full rounded-2xl object-cover object-[center_75%] shadow-card lg:h-[34rem]"
-              />
-            </div>
-
-            <div className="mt-12 flex justify-center">
-              <WhatsAppButton location="apos_diferenciais" size="xl">
-                Fale com um especialista
-              </WhatsAppButton>
-            </div>
-          </div>
-        </section>
+      
 
 
 
