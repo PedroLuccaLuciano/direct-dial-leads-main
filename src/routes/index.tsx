@@ -104,45 +104,12 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const servicos = [
-  {
-    icon: TreeDeciduous,
-    image: podaAltura.url,
-    title: "Poda de árvores em Joinville",
-    text: "Poda técnica em qualquer altura com cesto aéreo e caminhão munck, inclusive próximo à rede elétrica.",
-  },
-  {
-    icon: Axe,
-    image: munck.url,
-    title: "Remoção de árvores",
-    text: "Supressão segura de árvores de grande porte, com descida controlada dos galhos e do tronco.",
-  },
-  {
-    icon: Leaf,
-    image: rocada.url,
-    title: "Roçada de terrenos",
-    text: "Roçada em Joinville e Araquari: lotes, chácaras, condomínios e áreas industriais.",
-  },
-  {
-    icon: Truck,
-    image: munck.url,
-    title: "Caminhão munck",
-    text: "Içamento e movimentação de cargas com operador experiente e equipamento revisado.",
-  },
-  {
-    icon: Recycle,
-    image: limpeza.url,
-    title: "Retirada de resíduos",
-    text: "Recolhimento de galhos, troncos e entulho vegetal — descarte conforme o orçamento.",
-  },
-  {
-    icon: Sparkles,
-    image: podaEscalada.url,
-    title: "Limpeza pós-serviço",
-    text: "Entregamos a área varrida e organizada. O serviço só termina quando está limpo.",
-  },
+const servicos = [ 
+  { icon: TreeDeciduous, image: podaAltura.url, title: "Poda de árvores em Joinville", text: "Poda técnica em qualquer altura com cesto aéreo e caminhão munck, inclusive próximo à rede elétrica.", }, 
+  
+  { icon: Leaf, image: rocada.url, title: "Roçada de terrenos", text: "Roçada em Joinville e Araquari: lotes, chácaras, condomínios e áreas industriais.", }, 
+  { icon: Recycle, image: limpeza.url, title: "Limpeza e retirada de resíduos", text: "Recolhimento de galhos, troncos e entulho vegetal, com a área entregue varrida e organizada.", }, 
 ];
-
 const provaSocial = [
   { icon: BadgeCheck, title: "Empresa registrada", text: `CNPJ ${COMPANY.cnpj}` },
   { icon: Users, title: "Equipe com 5 profissionais", text: "Time próprio, uniformizado e treinado." },
