@@ -113,7 +113,7 @@ const servicos = [
 const provaSocial = [
   { icon: BadgeCheck, title: "Empresa registrada", text: `CNPJ ${COMPANY.cnpj}` },
   { icon: Users, title: "Equipe com 5 profissionais", text: "Time próprio, uniformizado e treinado." },
-  { icon: Ruler, title: "Atendimento em qualquer altura", text: "Cesto aéreo, escalada e munck." },
+  { icon: Ruler, title: "Atendimento em até 30 metros de altura", text: "Cesto aéreo, escalada e munck." },
   { icon: ClipboardCheck, title: "Visita técnica", text: "Avaliação no local antes da execução." },
   { icon: Wrench, title: "Equipamentos profissionais", text: "Máquinas revisadas e adequadas." },
   { icon: Axe, title: "Motosserras STIHL", text: "Corte limpo, seguro e mais rápido." },
@@ -197,7 +197,7 @@ const antesDepois = [
 const faq = [
   {
     q: "Fazem poda em qualquer altura?",
-    a: "Sim. Trabalhamos com caminhão munck, cesto aéreo e técnicas de escalada, o que permite atender árvores de pequeno, médio e grande porte.",
+    a: "Não. Trabalhamos com caminhão munck, cesto aéreo e técnicas de escalada, o que permite atender árvores de pequeno, médio e grande porte até 30 metros de altura. Árvores muito altas ou com acesso difícil podem exigir avaliação técnica.",
   },
   {
     q: "Trabalham próximos à rede elétrica?",
