@@ -107,7 +107,7 @@ export const Route = createFileRoute("/")({
 const servicos = [ 
   { icon: TreeDeciduous, image: podaAltura.url, title: "Poda de árvores em Joinville", text: "Poda técnica em qualquer altura com cesto aéreo e caminhão munck, inclusive próximo à rede elétrica.", }, 
   
-  { icon: Leaf, image: rocada.url, title: "Roçada de terrenos", text: "Roçada em Joinville e Araquari: lotes, chácaras, condomínios e áreas industriais.", }, 
+  { icon: Leaf, image: "/images/rocada1.png", title: "Roçada de terrenos", text: "Roçada em Joinville e Araquari: lotes, chácaras, condomínios e áreas industriais.", }, 
   { icon: Recycle, image: podaEscalada.url, title: "Limpeza e retirada de resíduos", text: "Recolhimento de galhos, troncos e entulho vegetal, com a área entregue varrida e organizada.", }, 
 ];
 const provaSocial = [
@@ -172,6 +172,9 @@ const galeria: GalleryItem[] = [
   { src: "/images/munck2.jpeg", alt: "Caminhão munck da RS Munck e Poda em operação", category: "Munck" },
   { src: "/images/munck3.jpeg", alt: "Caminhão munck da RS Munck e Poda em operação", category: "Munck" },
   { src: "/images/munck4.jpeg", alt: "Caminhão munck da RS Munck e Poda em operação", category: "Munck" },
+  { src: "/images/derrubada.jpeg", alt: "Derrubada de árvore realizada pela equipe da RS Munck e Poda", category: "Remoção" },
+  { src: "/images/munck5.jpeg", alt: "Caminhão munck da RS Munck e Poda em operação", category: "Munck" },
+  { src: "/images/munck6.jpeg", alt: "Caminhão munck da RS Munck e Poda em operação", category: "Munck" },
 ];
 
 const antesDepois = [
