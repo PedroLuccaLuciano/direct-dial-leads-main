@@ -82,7 +82,6 @@ export const Route = createFileRoute("/")({
           url: "https://rspoda.com.br",
           image: `https://rspoda.com.br${equipe.url}`,
           telephone: "+5547999439286",
-          priceRange: "$$",
           taxID: COMPANY.cnpj,
           address: {
             "@type": "PostalAddress",
