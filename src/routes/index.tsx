@@ -65,9 +65,9 @@ export const Route = createFileRoute("/")({
           "Poda em altura, remoção de árvores, roçada e serviços com caminhão munck em Joinville, Araquari e região. Orçamento gratuito pelo WhatsApp.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: `https://direct-dial-leads.lovable.app${equipe.url}` },
+      { property: "og:image", content: `https://rspoda.com.br${equipe.url}` },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: `https://direct-dial-leads.lovable.app${equipe.url}` },
+      { name: "twitter:image", content: `https://rspoda.com.br${equipe.url}` },
     ],
     links: [{ rel: "preload", as: "image", href: equipe.url, fetchPriority: "high" }],
     scripts: [
