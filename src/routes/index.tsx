@@ -258,7 +258,7 @@ function Index() {
 
       <main>
         {/* HERO */}
-        <section className="relative isolate flex min-h-[94svh] items-center overflow-hidden pt-20">
+        <section className="relative isolate flex min-h-[80svh] items-center overflow-hidden pt-20">
           <img
             src={equipe.url}
             alt="Equipe da RS Poda com caminhão munck ao lado de árvores em Joinville"
@@ -270,7 +270,7 @@ function Index() {
           />
           <div className="absolute inset-0 -z-10 bg-primary/70" />
           <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/90 via-primary/55 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-background/95 to-transparent" />
+            
 
           <div className="mx-auto w-full max-w-6xl px-4 py-16">
             <div className="mx-auto max-w-3xl text-center flex flex-col items-center">
