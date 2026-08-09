@@ -79,7 +79,10 @@ export const Route = createFileRoute("/")({
           name: "RS Munck e Poda",
           description:
             "Poda de árvores, remoção de árvores, roçada, serviços ambientais e caminhão munck em Joinville, Araquari e região norte de Santa Catarina.",
+          url: "https://rspoda.com.br",
+          image: `https://rspoda.com.br${equipe.url}`,
           telephone: "+5547999439286",
+          priceRange: "$$",
           taxID: COMPANY.cnpj,
           address: {
             "@type": "PostalAddress",
@@ -89,6 +92,11 @@ export const Route = createFileRoute("/")({
           },
           areaServed: CIDADES.map((c) => ({ "@type": "City", name: c })),
           openingHours: "Mo-Fr",
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: -26.3044,
+            longitude: -48.8456,
+          },
         }),
       },
       {
