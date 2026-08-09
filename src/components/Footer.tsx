@@ -21,7 +21,7 @@ export function Footer() {
         <div>
           <img
             src={logo.url}
-            alt="Logotipo RS Munck e Poda"
+            alt="Logotipo RS Poda"
             width={80}
             height={80}
             loading="lazy"

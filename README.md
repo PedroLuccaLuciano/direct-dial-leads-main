@@ -10,7 +10,7 @@ Número: +55 47 99943-9286
 
 Mensagem automática:
 
-"Olá! Vim pelo site da RS Munck e Poda e gostaria de solicitar um orçamento para poda de árvores ou roçada."
+"Olá! Vim pelo site da RS Poda e gostaria de solicitar um orçamento para poda de árvores ou roçada."
 
 O botão deve abrir diretamente a conversa no WhatsApp.
 
@@ -84,7 +84,7 @@ Criar também um evento específico para registrar todos os cliques nos botões 
 
 Imagens
 
-Utilizar prioritariamente as imagens reais fornecidas pela RS Munck e Poda.
+Utilizar prioritariamente as imagens reais fornecidas pela RS Poda.
 
 Não substituir por imagens genéricas de banco de imagens, exceto como placeholders temporários durante o desenvolvimento.
 
@@ -112,7 +112,7 @@ Dar prioridade para fotos reais da empresa, transmitindo credibilidade, autentic
 
 Objetivo Final
 
-A landing page deve transmitir que a RS Munck e Poda é uma empresa séria, organizada, segura e altamente profissional, focada em gerar o maior número possível de solicitações de orçamento via WhatsApp.Configuração de Conversão e Integrações
+A landing page deve transmitir que a RS Poda é uma empresa séria, organizada, segura e altamente profissional, focada em gerar o maior número possível de solicitações de orçamento via WhatsApp.Configuração de Conversão e Integrações
 
 Integração com WhatsApp
 
@@ -122,7 +122,7 @@ Número: +55 47 99943-9286
 
 Mensagem automática:
 
-"Olá! Vim pelo site da RS Munck e Poda e gostaria de solicitar um orçamento para poda de árvores ou roçada."
+"Olá! Vim pelo site da RS Poda e gostaria de solicitar um orçamento para poda de árvores ou roçada."
 
 O botão deve abrir diretamente a conversa no WhatsApp.
 
@@ -196,7 +196,7 @@ Criar também um evento específico para registrar todos os cliques nos botões 
 
 Imagens
 
-Utilizar prioritariamente as imagens reais fornecidas pela RS Munck e Poda.
+Utilizar prioritariamente as imagens reais fornecidas pela RS Poda.
 
 Não substituir por imagens genéricas de banco de imagens, exceto como placeholders temporários durante o desenvolvimento.
 
@@ -224,7 +224,7 @@ Dar prioridade para fotos reais da empresa, transmitindo credibilidade, autentic
 
 Objetivo Final
 
-A landing page deve transmitir que a RS Munck e Poda é uma empresa séria, organizada, segura e altamente profissional, focada em gerar o maior número possível de solicitações de orçamento via WhatsApp.
+A landing page deve transmitir que a RS Poda é uma empresa séria, organizada, segura e altamente profissional, focada em gerar o maior número possível de solicitações de orçamento via WhatsApp.
 
 This project was built with [Lovable](https://lovable.dev).
 

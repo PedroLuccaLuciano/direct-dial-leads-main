@@ -2,7 +2,7 @@ export const WHATSAPP_NUMBER = "5547999439286";
 export const WHATSAPP_DISPLAY = "(47) 99943-9286";
 
 export const WHATSAPP_MESSAGE =
-  "Olá! Vim pelo site da RS Munck e Poda e gostaria de solicitar um orçamento para poda de árvores ou roçada.";
+  "Olá! Vim pelo site da RS Poda e gostaria de solicitar um orçamento para poda de árvores ou roçada.";
 
 /**
  * api.whatsapp.com/send funciona tanto no app mobile quanto no WhatsApp Web,

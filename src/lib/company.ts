@@ -1,5 +1,5 @@
 export const COMPANY = {
-  name: "RS Munck e Poda",
+  name: "RS Poda",
   cnpj: "49.659.898/0001-01",
   hours: "Segunda à sexta • Atendimento emergencial quando necessário",
   areaShort: "Joinville, Araquari e cidades num raio de até 40 km",

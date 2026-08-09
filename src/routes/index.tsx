@@ -48,7 +48,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Poda de Árvores em Joinville | RS Munck e Poda — Roçada e Munck",
+        title: "Poda de Árvores em Joinville | RS Poda — Roçada e Munck",
       },
       {
         name: "description",
@@ -57,7 +57,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Poda de Árvores, Remoção e Roçada em Joinville | RS Munck e Poda",
+        content: "Poda de Árvores, Remoção e Roçada em Joinville | RS Poda",
       },
       {
         property: "og:description",
@@ -76,7 +76,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          name: "RS Munck e Poda",
+          name: "RS Poda",
           description:
             "Poda de árvores, remoção de árvores, roçada, serviços ambientais e caminhão munck em Joinville, Araquari e região norte de Santa Catarina.",
           url: "https://rspoda.com.br",
@@ -175,13 +175,13 @@ const galeria: GalleryItem[] = [
 
   { src: limpeza.url, alt: "Área limpa e galhos recolhidos após o serviço de poda", category: "Limpeza" },
 
-  { src: "/images/munck1.jpeg", alt: "Caminhão munck da RS Munck e Poda em operação", category: "Munck" },
-  { src: "/images/munck2.jpeg", alt: "Caminhão munck da RS Munck e Poda em operação", category: "Munck" },
-  { src: "/images/munck3.jpeg", alt: "Caminhão munck da RS Munck e Poda em operação", category: "Munck" },
-  { src: "/images/munck4.jpeg", alt: "Caminhão munck da RS Munck e Poda em operação", category: "Munck" },
-  { src: "/images/derrubada.jpeg", alt: "Derrubada de árvore realizada pela equipe da RS Munck e Poda", category: "Remoção" },
-  { src: "/images/munck5.jpeg", alt: "Caminhão munck da RS Munck e Poda em operação", category: "Munck" },
-  { src: "/images/munck6.jpeg", alt: "Caminhão munck da RS Munck e Poda em operação", category: "Munck" },
+  { src: "/images/munck1.jpeg", alt: "Caminhão munck da RS Poda em operação", category: "Munck" },
+  { src: "/images/munck2.jpeg", alt: "Caminhão munck da RS Poda em operação", category: "Munck" },
+  { src: "/images/munck3.jpeg", alt: "Caminhão munck da RS Poda em operação", category: "Munck" },
+  { src: "/images/munck4.jpeg", alt: "Caminhão munck da RS Poda em operação", category: "Munck" },
+  { src: "/images/derrubada.jpeg", alt: "Derrubada de árvore realizada pela equipe da RS Poda", category: "Remoção" },
+  { src: "/images/munck5.jpeg", alt: "Caminhão munck da RS Poda em operação", category: "Munck" },
+  { src: "/images/munck6.jpeg", alt: "Caminhão munck da RS Poda em operação", category: "Munck" },
 ];
 
 const antesDepois = [
@@ -259,7 +259,7 @@ function Index() {
         <section className="relative isolate flex min-h-[94svh] items-center overflow-hidden pt-20">
           <img
             src={equipe.url}
-            alt="Equipe da RS Munck e Poda com caminhão munck ao lado de árvores em Joinville"
+            alt="Equipe da RS Poda com caminhão munck ao lado de árvores em Joinville"
             width={1200}
             height={1600}
             fetchPriority="high"
@@ -328,7 +328,7 @@ function Index() {
           <header className="max-w-2xl">
             <p className="text-sm font-bold uppercase tracking-widest text-accent">Confiança</p>
             <h2 className="mt-2 text-3xl font-extrabold text-primary sm:text-4xl">
-              Por que escolher a RS Munck e Poda?
+              Por que escolher a RS Poda?
             </h2>
           </header>
 
@@ -461,7 +461,7 @@ function Index() {
           <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2">
             <img
               src={munck.url}
-              alt="Caminhão munck da RS Munck e Poda com braço articulado em operação"
+              alt="Caminhão munck da RS Poda com braço articulado em operação"
               width={1000}
               height={750}
               loading="lazy"
@@ -474,7 +474,7 @@ function Index() {
                 Também realizamos serviços com Caminhão Munck
               </h2>
               <p className="mt-4 text-muted-foreground">
-                Além da poda de árvores, a RS Munck e Poda realiza movimentação de cargas,
+                Além da poda de árvores, a RS Poda realiza movimentação de cargas,
                 instalação de containers, içamento de máquinas, estruturas metálicas e apoio para
                 obras.
               </p>

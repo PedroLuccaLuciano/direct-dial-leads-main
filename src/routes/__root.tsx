@@ -77,15 +77,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "RS Munck e Poda | Poda de Árvores e Roçada" },
+      { title: "RS Poda | Poda de Árvores e Roçada" },
       {
         name: "description",
         content:
           "Poda de árvores, roçada e locação de munck com equipe profissional e limpeza completa. Orçamento gratuito pelo WhatsApp.",
       },
-      { name: "author", content: "RS Munck e Poda" },
+      { name: "author", content: "RS Poda" },
       { name: "theme-color", content: "#1b4380" },
-      { property: "og:title", content: "RS Munck e Poda | Poda de Árvores e Roçada" },
+      { property: "og:title", content: "RS Poda | Poda de Árvores e Roçada" },
       {
         property: "og:description",
         content:
