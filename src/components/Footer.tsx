@@ -28,7 +28,7 @@ export function Footer() {
             className="h-16 w-auto rounded-md bg-background p-1.5"
           />
           <p className="mt-4 max-w-xs text-sm text-primary-foreground/80">
-            Poda de árvores, remoção, roçada e serviços com caminhão munck em Joinville e região,
+            Poda de árvores, remoção e roçada de terrenos em Joinville e região,
             com equipe treinada e EPIs completos.
           </p>
           <p className="mt-4 text-xs text-primary-foreground/70">

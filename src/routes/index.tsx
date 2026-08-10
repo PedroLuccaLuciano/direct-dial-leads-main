@@ -48,12 +48,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Poda de Árvores em Joinville | RS Poda — Roçada e Munck",
+        title: "Poda de Árvores em Joinville | RS Poda — Remoção e Roçada",
       },
       {
         name: "description",
         content:
-          "Empresa de poda de árvores em Joinville e Araquari: poda em altura, remoção de árvores, roçada e caminhão munck. Equipe com EPIs e motosserras STIHL. Orçamento gratuito no WhatsApp.",
+          "Empresa de poda de árvores em Joinville e Araquari: poda em altura, remoção de árvores e roçada de terrenos. Equipe com EPIs e motosserras STIHL. Orçamento gratuito no WhatsApp.",
       },
       {
         property: "og:title",
@@ -62,7 +62,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Poda em altura, remoção de árvores, roçada e serviços com caminhão munck em Joinville, Araquari e região. Orçamento gratuito pelo WhatsApp.",
+          "Poda em altura, remoção de árvores e roçada de terrenos em Joinville, Araquari e região. Orçamento gratuito pelo WhatsApp.",
       },
       { property: "og:type", content: "website" },
       { property: "og:image", content: `https://rspoda.com.br${equipe.url}` },
@@ -78,7 +78,7 @@ export const Route = createFileRoute("/")({
           "@type": "LocalBusiness",
           name: "RS Poda",
           description:
-            "Poda de árvores, remoção de árvores, roçada, serviços ambientais e caminhão munck em Joinville, Araquari e região norte de Santa Catarina.",
+            "Poda de árvores, remoção de árvores, roçada e serviços ambientais em Joinville, Araquari e região norte de Santa Catarina.",
           url: "https://rspoda.com.br",
           image: `https://rspoda.com.br${equipe.url}`,
           telephone: "+5547999439286",
