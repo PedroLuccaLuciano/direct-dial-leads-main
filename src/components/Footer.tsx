@@ -20,7 +20,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <img
-            src={logo.url}
+            src={"/images/icone3.png"}
             alt="Logotipo RS Poda"
             width={80}
             height={80}
