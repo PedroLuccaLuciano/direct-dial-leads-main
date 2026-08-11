@@ -364,7 +364,7 @@ function Index() {
         </section>
 
         {/* CLIENTES */}
-        <section className="bg-secondary py-16">
+        <section id="clientes" className="bg-secondary py-16">
           <div className="mx-auto max-w-5xl px-4">
             <h2 className="text-center text-2xl font-extrabold uppercase tracking-wide text-primary sm:text-3xl">
               Conheça alguns dos nossos clientes
