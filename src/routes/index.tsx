@@ -11,6 +11,11 @@ import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Gallery, type GalleryItem } from "@/components/Gallery";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { initAnalytics } from "@/lib/analytics";
 import { WHATSAPP_DISPLAY } from "@/lib/whatsapp";
@@ -130,6 +135,14 @@ const provaSocial = [
   { icon: Timer, title: "Atendimento rápido", text: "Retorno no WhatsApp e agenda organizada." },
   { icon: Sparkles, title: "Limpeza completa", text: "Área entregue limpa após o serviço." },
   { icon: Recycle, title: "Descarte conforme orçamento", text: "Destinação combinada previamente." },
+];
+
+const clientes = [
+  { src: "/images/essencis.png", alt: "Essencis Catarinense" },
+  { src: "/images/laureano.png", alt: "Laureano" },
+  { src: "/images/logo-arca.png", alt: "Arca" },
+  { src: "/images/navalsul.png", alt: "Naval Sul" },
+  { src: "/images/trg-logo.png", alt: "TRG" },
 ];
 
 const numeros = [
@@ -350,24 +363,32 @@ function Index() {
           </ul>
         </section>
 
-        {/* NÚMEROS */}
-        <section className="bg-primary py-16">
-          <div className="mx-auto max-w-6xl px-4">
-            <h2 className="text-center text-3xl font-extrabold text-primary-foreground sm:text-4xl">
-              Compromisso com qualidade e segurança
+        {/* CLIENTES */}
+        <section className="bg-secondary py-16">
+          <div className="mx-auto max-w-5xl px-4">
+            <h2 className="text-center text-2xl font-extrabold uppercase tracking-wide text-primary sm:text-3xl">
+              Conheça alguns dos nossos clientes
             </h2>
-            <ul className="mt-10 grid gap-5 sm:grid-cols-3 max-w-5xl mx-auto">
-              {numeros.map((n) => (
-                <li
-                  key={n.label}
-                  className="rounded-2xl border border-primary-foreground/15 bg-primary-foreground/5 p-6 text-center backdrop-blur transition-transform duration-300 hover:-translate-y-1"
-                >
-                  <n.icon aria-hidden="true" className="mx-auto size-8 text-accent" />
-                  <p className="mt-4 text-xl font-extrabold text-primary-foreground">{n.value}</p>
-                  <p className="mt-1 text-sm text-primary-foreground/80">{n.label}</p>
-                </li>
-              ))}
-            </ul>
+            <Carousel opts={{ align: "center", loop: true }} className="mt-10">
+              <CarouselContent>
+                {clientes.map((c) => (
+                  <CarouselItem
+                    key={c.alt}
+                    className="basis-1/2 sm:basis-1/3 lg:basis-1/5"
+                  >
+                    <div className="flex h-24 items-center justify-center px-4">
+                      <img
+                        src={c.src}
+                        alt={c.alt}
+                        loading="lazy"
+                        decoding="async"
+                        className="max-h-16 w-auto max-w-full object-contain"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
           </div>
         </section>
 
