@@ -136,8 +136,8 @@ const provaSocial = [
 const clientes = [
   { src: "/images/essencis.png", alt: "Essencis Catarinense" },
   { src: "/images/laureano.png", alt: "Laureano" },
-  { src: "/images/logo-arca.png", alt: "Arca" },
-  { src: "/images/navalsul.png", alt: "Naval Sul" },
+  { src: "/images/logo-arca.png", alt: "Arca", tall: true },
+  { src: "/images/navalsul.png", alt: "Naval Sul", tall: true },
   { src: "/images/trg-logo.png", alt: "TRG" },
 ];
 
@@ -324,7 +324,7 @@ function Index() {
         {/* PROVA SOCIAL */}
         <section id="por-que" className="mx-auto max-w-6xl px-4 py-20">
           <header className="max-w-2xl">
-            <p className="text-sm font-bold uppercase tracking-widest text-accent">Confiança</p>
+            <p className="text-sm font-bold uppercase tracking-widest text-accent-text">Confiança</p>
             <h2 className="mt-2 text-3xl font-extrabold text-primary sm:text-4xl">
               Por que escolher a RS Poda?
             </h2>
@@ -365,7 +365,7 @@ function Index() {
                         alt={c.alt}
                         loading="lazy"
                         decoding="async"
-                        className="max-h-16 w-auto max-w-full object-contain"
+                        className={`w-auto max-w-full object-contain ${c.tall ? "max-h-20" : "max-h-16"}`}
                       />
                     </div>
                   </CarouselItem>
@@ -378,7 +378,7 @@ function Index() {
         {/* SERVIÇOS */}
         <section id="servicos" className="mx-auto max-w-6xl px-4 py-20">
           <header className="max-w-2xl">
-            <p className="text-sm font-bold uppercase tracking-widest text-accent">Serviços</p>
+            <p className="text-sm font-bold uppercase tracking-widest text-accent-text">Serviços</p>
             <h2 className="mt-2 text-3xl font-extrabold text-primary sm:text-4xl">
               Poda, remoção, roçada e munck em Joinville e Araquari
             </h2>
@@ -388,7 +388,7 @@ function Index() {
             {servicos.map((s) => (
               <li
                 key={s.title}
-                className="group overflow-hidden rounded-2xl border border-border bg-card shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg"
               >
                 <div className="relative h-40 overflow-hidden">
                   <img
@@ -405,7 +405,7 @@ function Index() {
                     <s.icon aria-hidden="true" className="size-6 text-accent" />
                   </span>
                 </div>
-                <div className="p-6">
+                <div className="flex flex-1 flex-col p-6">
                   <h3 className="text-lg font-bold text-primary">{s.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{s.text}</p>
                   <a
@@ -413,7 +413,7 @@ function Index() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => trackWhatsAppClick(`servico_${s.key}`)}
-                    className="mt-4 inline-block text-sm font-semibold text-accent hover:underline"
+                    className="mt-auto self-start pt-4 text-sm font-semibold text-primary underline-offset-4 hover:underline"
                   >
                     Pedir orçamento →
                   </a>
@@ -433,7 +433,7 @@ function Index() {
         <section id="antes-depois" className="bg-secondary py-20">
           <div className="mx-auto max-w-6xl px-4">
             <header className="max-w-2xl">
-              <p className="text-sm font-bold uppercase tracking-widest text-accent">Resultados</p>
+              <p className="text-sm font-bold uppercase tracking-widest text-accent-text">Resultados</p>
               <h2 className="mt-2 text-3xl font-extrabold text-primary sm:text-4xl">
                 Veja o resultado dos nossos serviços
               </h2>
@@ -447,7 +447,7 @@ function Index() {
         {/* GALERIA */}
         <section id="trabalhos" className="mx-auto max-w-6xl px-4 py-20">
           <header className="max-w-2xl">
-            <p className="text-sm font-bold uppercase tracking-widest text-accent">Galeria</p>
+            <p className="text-sm font-bold uppercase tracking-widest text-accent-text">Galeria</p>
             <h2 className="mt-2 text-3xl font-extrabold text-primary sm:text-4xl">
               Serviços executados pela nossa equipe
             </h2>
@@ -484,7 +484,7 @@ function Index() {
               className="h-72 w-full rounded-2xl object-cover shadow-card lg:h-[26rem]"
             />
             <div>
-              <p className="text-sm font-bold uppercase tracking-widest text-accent">Munck</p>
+              <p className="text-sm font-bold uppercase tracking-widest text-accent-text">Munck</p>
               <h2 className="mt-2 text-3xl font-extrabold text-primary sm:text-4xl">
                 Também realizamos serviços com Caminhão Munck
               </h2>
@@ -505,7 +505,7 @@ function Index() {
         {/* ÁREA DE ATENDIMENTO */}
         <section id="area" className="mx-auto max-w-6xl px-4 py-20">
           <header className="max-w-2xl">
-            <p className="text-sm font-bold uppercase tracking-widest text-accent">
+            <p className="text-sm font-bold uppercase tracking-widest text-accent-text">
               Área de atendimento
             </p>
             <h2 className="mt-2 text-3xl font-extrabold text-primary sm:text-4xl">
