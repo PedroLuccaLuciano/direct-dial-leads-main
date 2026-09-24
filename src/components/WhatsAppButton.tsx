@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { WHATSAPP_URL } from "@/lib/whatsapp";
+import { WHATSAPP_URL, whatsappUrl } from "@/lib/whatsapp";
 import { trackWhatsAppClick } from "@/lib/analytics";
 import { Button, type ButtonProps } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
@@ -9,6 +9,8 @@ type Props = Omit<ButtonProps, "asChild"> & {
   location: string;
   children: React.ReactNode;
   showIcon?: boolean;
+  /** Mensagem específica do serviço; sem ela usa a mensagem geral. */
+  message?: string;
 };
 
 export function WhatsAppButton({
@@ -18,12 +20,13 @@ export function WhatsAppButton({
   variant = "whatsapp",
   size = "lg",
   showIcon = true,
+  message,
   ...rest
 }: Props) {
   return (
     <Button asChild variant={variant} size={size} className={cn(className)} {...rest}>
       <a
-        href={WHATSAPP_URL}
+        href={message ? whatsappUrl(message) : WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => trackWhatsAppClick(location)}

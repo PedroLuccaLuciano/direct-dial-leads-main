@@ -42,7 +42,7 @@ export function BeforeAfter({ items }: { items: BeforeAfterItem[] }) {
 
       <div className="lg:col-span-2 flex justify-center">
         <WhatsAppButton location="antes_depois" size="xl">
-          Quero um resultado assim no meu terreno
+          Pedir orçamento no WhatsApp
         </WhatsAppButton>
       </div>
     </div>

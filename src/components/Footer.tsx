@@ -54,7 +54,7 @@ export function Footer() {
             </li>
             <li className="flex items-start gap-2">
               <Clock aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-accent" />
-              {COMPANY.hours}
+              {COMPANY.hours} • Emergência: ligue
             </li>
             <li className="flex items-start gap-2">
               <MapPin aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-accent" />
@@ -91,7 +91,7 @@ export function Footer() {
             Resposta rápida pelo WhatsApp, sem compromisso.
           </p>
           <WhatsAppButton location="rodape" size="lg" className="mt-4 w-full sm:w-auto">
-            Falar com um especialista
+            Pedir orçamento no WhatsApp
           </WhatsAppButton>
         </div>
       </div>

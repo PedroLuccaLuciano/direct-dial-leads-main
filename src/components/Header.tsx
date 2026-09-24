@@ -65,7 +65,7 @@ export function Header() {
             <Phone aria-hidden="true" className="size-5" />
           </a>
           <WhatsAppButton location="header" size="lg">
-            <span className="hidden sm:inline">Solicitar Orçamento</span>
+            <span className="hidden sm:inline">Pedir orçamento</span>
             <span className="sm:hidden">Orçamento</span>
           </WhatsAppButton>
         </div>

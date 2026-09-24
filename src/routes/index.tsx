@@ -18,8 +18,9 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { BeforeAfter } from "@/components/BeforeAfter";
-import { initAnalytics } from "@/lib/analytics";
-import { WHATSAPP_DISPLAY } from "@/lib/whatsapp";
+import { initAnalytics, trackWhatsAppClick } from "@/lib/analytics";
+import { QuoteForm } from "@/components/QuoteForm";
+import { MENSAGENS, WHATSAPP_DISPLAY, whatsappUrl } from "@/lib/whatsapp";
 import { COMPANY, CIDADES } from "@/lib/company";
 import podaAltura from "@/assets/poda-altura.jpeg.asset.json";
 import equipe from "@/assets/equipe.jpeg.asset.json";
@@ -42,8 +43,6 @@ import {
   Ruler,
   ShieldCheck,
   Siren,
-  Sparkles,
-  Timer,
   TreeDeciduous,
   Truck,
   Users,
@@ -120,22 +119,18 @@ export const Route = createFileRoute("/")({
 });
 
 const servicos = [
-  { icon: TreeDeciduous, image: "/images/munck5.jpeg", title: "Poda de árvores em Joinville", text: "Poda técnica em qualquer altura com cesto aéreo e caminhão munck, inclusive próximo à rede elétrica." },
-  { icon: Axe, image: "/images/derrubada.jpeg", title: "Remoção de árvores", text: "Derrubada segura de árvores de pequeno a grande porte, com equipe treinada, EPIs e, quando necessário, munck e cesto aéreo." },
-  { icon: Leaf, image: "/images/rocada1.png", title: "Roçada de terrenos", text: "Roçada em Joinville e Araquari: lotes, chácaras, condomínios e áreas industriais." },
-  { icon: Recycle, image: podaEscalada.url, title: "Limpeza e retirada de resíduos", text: "Recolhimento de galhos, troncos e entulho vegetal, com a área entregue varrida e organizada." },
+  { key: "poda", icon: TreeDeciduous, image: "/images/munck5.jpeg", title: "Poda de árvores em Joinville", text: "Poda técnica em qualquer altura com cesto aéreo e caminhão munck, inclusive próximo à rede elétrica.", msg: MENSAGENS.poda },
+  { key: "remocao", icon: Axe, image: "/images/derrubada.jpeg", title: "Remoção de árvores", text: "Derrubada segura de árvores de pequeno a grande porte, com equipe treinada, EPIs e, quando necessário, munck e cesto aéreo.", msg: MENSAGENS.remocao },
+  { key: "rocada", icon: Leaf, image: "/images/rocada1.png", title: "Roçada de terrenos", text: "Roçada em Joinville e Araquari: lotes, chácaras, condomínios e áreas industriais.", msg: MENSAGENS.rocada },
+  { key: "limpeza", icon: Recycle, image: podaEscalada.url, title: "Limpeza e retirada de resíduos", text: "Recolhimento de galhos, troncos e entulho vegetal, com a área entregue varrida e organizada.", msg: MENSAGENS.limpeza },
 ];
 const provaSocial = [
   { icon: BadgeCheck, title: "Empresa registrada", text: `CNPJ ${COMPANY.cnpj}` },
   { icon: Users, title: "Equipe com 5 profissionais", text: "Time próprio, uniformizado e treinado." },
   { icon: Ruler, title: "Atendimento em até 30 metros de altura", text: "Cesto aéreo, escalada e munck." },
   { icon: ClipboardCheck, title: "Visita técnica", text: "Avaliação no local antes da execução." },
-  { icon: Wrench, title: "Equipamentos profissionais", text: "Máquinas revisadas e adequadas." },
-  { icon: Axe, title: "Motosserras STIHL", text: "Corte limpo, seguro e mais rápido." },
   { icon: Truck, title: "Caminhão munck próprio", text: "Sem depender de terceiros." },
-  { icon: Timer, title: "Atendimento rápido", text: "Retorno no WhatsApp e agenda organizada." },
-  { icon: Sparkles, title: "Limpeza completa", text: "Área entregue limpa após o serviço." },
-  { icon: Recycle, title: "Descarte conforme orçamento", text: "Destinação combinada previamente." },
+  { icon: HardHat, title: "EPIs completos", text: "Capacete, cinto, luvas e protetores em toda a equipe." },
 ];
 
 const clientes = [
@@ -283,8 +278,7 @@ function Index() {
             <div className="mx-auto max-w-3xl text-center flex flex-col items-center">
               <p className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/25 bg-primary-foreground/10 px-4 py-2 text-xs font-semibold text-primary-foreground backdrop-blur sm:text-sm">
                 <span aria-hidden="true" className="size-2 shrink-0 rounded-full bg-accent" />
-                Atendemos Joinville, Araquari e cidades em um raio de até 40 km. Atendimento
-                emergencial quando necessário.
+                Atendemos Joinville, Araquari e cidades em um raio de até 40 km. Emergência: ligue.
               </p>
 
               <h1 className="mt-5 text-3xl font-extrabold leading-[1.08] text-primary-foreground sm:text-5xl lg:text-6xl">
@@ -293,8 +287,8 @@ function Index() {
 
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <WhatsAppButton location="hero" size="xl">
-                  Solicite um orçamento gratuito
-                </WhatsAppButton>
+              Pedir orçamento no WhatsApp
+            </WhatsAppButton>
                 <PhoneButton location="hero" variant="outlineLight" size="xl">
                   Ligar agora
                 </PhoneButton>
@@ -311,15 +305,15 @@ function Index() {
                 <div className="flex items-start gap-2">
                   <Clock aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-accent" />
                   <div>
-                    <dt className="font-semibold">Segunda à sexta</dt>
-                    <dd>Agenda organizada</dd>
+                    <dt className="font-semibold">Atendimento</dt>
+                    <dd>{COMPANY.hours}</dd>
                   </div>
                 </div>
                 <div className="flex items-start gap-2">
                   <Siren aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-accent" />
                   <div>
                     <dt className="font-semibold">Emergência</dt>
-                    <dd>Atendimento quando necessário</dd>
+                    <dd>{COMPANY.emergencia}</dd>
                   </div>
                 </div>
               </dl>
@@ -414,6 +408,15 @@ function Index() {
                 <div className="p-6">
                   <h3 className="text-lg font-bold text-primary">{s.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{s.text}</p>
+                  <a
+                    href={whatsappUrl(s.msg)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackWhatsAppClick(`servico_${s.key}`)}
+                    className="mt-4 inline-block text-sm font-semibold text-accent hover:underline"
+                  >
+                    Pedir orçamento →
+                  </a>
                 </div>
               </li>
             ))}
@@ -421,7 +424,7 @@ function Index() {
 
           <div className="mt-10 flex justify-center">
             <WhatsAppButton location="apos_servicos" size="xl">
-              Solicitar orçamento gratuito
+              Pedir orçamento no WhatsApp
             </WhatsAppButton>
           </div>
         </section>
@@ -459,7 +462,7 @@ function Index() {
 
           <div className="mt-10 flex justify-center">
             <WhatsAppButton location="apos_galeria" size="xl">
-              Atendimento rápido pelo WhatsApp
+              Pedir orçamento no WhatsApp
             </WhatsAppButton>
           </div>
         </section>
@@ -491,9 +494,9 @@ function Index() {
                 obras.
               </p>
               <div className="mt-8">
-                <WhatsAppButton location="munck" size="xl">
-                  Conheça nossos serviços de Munck
-                </WhatsAppButton>
+                <WhatsAppButton location="munck" size="xl" message={MENSAGENS.munck}>
+              Pedir orçamento no WhatsApp
+            </WhatsAppButton>
               </div>
             </div>
           </div>
@@ -527,7 +530,7 @@ function Index() {
 
           <div className="mt-10 flex justify-center">
             <WhatsAppButton location="antes_faq" size="xl">
-              Consultar atendimento na minha cidade
+              Pedir orçamento no WhatsApp
             </WhatsAppButton>
           </div>
         </section>
@@ -566,16 +569,10 @@ function Index() {
               Solicite um orçamento gratuito agora mesmo.
             </h2>
             <p className="mt-4 text-lg text-primary-foreground/90">
-              Nossa equipe está pronta para atender você com rapidez, segurança e qualidade.
+              Escolha o serviço, informe o local e o dia. Abrimos o WhatsApp já com tudo preenchido.
             </p>
-            <div className="mt-9 flex justify-center">
-              <WhatsAppButton
-                location="chamada_final"
-                size="xl"
-                className="w-full px-10 py-7 text-lg sm:w-auto"
-              >
-                Falar no WhatsApp {WHATSAPP_DISPLAY}
-              </WhatsAppButton>
+            <div className="mt-9">
+              <QuoteForm />
             </div>
           </div>
         </section>
