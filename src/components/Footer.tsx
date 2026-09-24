@@ -1,6 +1,7 @@
 import logo from "@/assets/logo-rs.png.asset.json";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { WHATSAPP_DISPLAY } from "@/lib/whatsapp";
+import { trackPhoneClick } from "@/lib/analytics";
 import { COMPANY, CIDADES } from "@/lib/company";
 import { Clock, Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 
@@ -45,6 +46,7 @@ export function Footer() {
               <a
                 className="flex items-center gap-2 transition-colors hover:text-accent"
                 href={`tel:+55${WHATSAPP_DISPLAY.replace(/\D/g, "")}`}
+                onClick={() => trackPhoneClick("rodape")}
               >
                 <Phone aria-hidden="true" className="size-4 text-accent" />
                 {WHATSAPP_DISPLAY}

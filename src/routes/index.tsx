@@ -10,6 +10,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { PhoneButton } from "@/components/PhoneButton";
 import { Gallery, type GalleryItem } from "@/components/Gallery";
 import {
   Carousel,
@@ -118,11 +119,11 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const servicos = [ 
-  { icon: TreeDeciduous, image: podaAltura.url, title: "Poda de árvores em Joinville", text: "Poda técnica em qualquer altura com cesto aéreo e caminhão munck, inclusive próximo à rede elétrica.", }, 
-  
-  { icon: Leaf, image: "/images/rocada1.png", title: "Roçada de terrenos", text: "Roçada em Joinville e Araquari: lotes, chácaras, condomínios e áreas industriais.", }, 
-  { icon: Recycle, image: podaEscalada.url, title: "Limpeza e retirada de resíduos", text: "Recolhimento de galhos, troncos e entulho vegetal, com a área entregue varrida e organizada.", }, 
+const servicos = [
+  { icon: TreeDeciduous, image: "/images/munck5.jpeg", title: "Poda de árvores em Joinville", text: "Poda técnica em qualquer altura com cesto aéreo e caminhão munck, inclusive próximo à rede elétrica." },
+  { icon: Axe, image: "/images/derrubada.jpeg", title: "Remoção de árvores", text: "Derrubada segura de árvores de pequeno a grande porte, com equipe treinada, EPIs e, quando necessário, munck e cesto aéreo." },
+  { icon: Leaf, image: "/images/rocada1.png", title: "Roçada de terrenos", text: "Roçada em Joinville e Araquari: lotes, chácaras, condomínios e áreas industriais." },
+  { icon: Recycle, image: podaEscalada.url, title: "Limpeza e retirada de resíduos", text: "Recolhimento de galhos, troncos e entulho vegetal, com a área entregue varrida e organizada." },
 ];
 const provaSocial = [
   { icon: BadgeCheck, title: "Empresa registrada", text: `CNPJ ${COMPANY.cnpj}` },
@@ -184,19 +185,12 @@ const seguranca = [
 ];
 
 const galeria: GalleryItem[] = [
-  { src: podaAltura.url, alt: "Poda de árvore em altura com cesto aéreo próximo à rede elétrica em Joinville", category: "Poda" },
-  { src: podaEscalada.url, alt: "Podador escalando árvore com cinto de segurança e motosserra", category: "Poda" },
-  { src: rocada.url, alt: "Roçada de terreno com equipamento profissional e EPIs", category: "Munck" },
-
-  { src: limpeza.url, alt: "Área limpa e galhos recolhidos após o serviço de poda", category: "Limpeza" },
-
-  { src: "/images/munck1.jpeg", alt: "Caminhão munck da RS Poda em operação", category: "Munck" },
-  { src: "/images/munck2.jpeg", alt: "Caminhão munck da RS Poda em operação", category: "Munck" },
-  { src: "/images/munck3.jpeg", alt: "Caminhão munck da RS Poda em operação", category: "Munck" },
-  { src: "/images/munck4.jpeg", alt: "Caminhão munck da RS Poda em operação", category: "Munck" },
-  { src: "/images/derrubada.jpeg", alt: "Derrubada de árvore realizada pela equipe da RS Poda", category: "Remoção" },
-  { src: "/images/munck5.jpeg", alt: "Caminhão munck da RS Poda em operação", category: "Munck" },
-  { src: "/images/munck6.jpeg", alt: "Caminhão munck da RS Poda em operação", category: "Munck" },
+  { src: "/images/munck1.jpeg", alt: "Poda de palmeira com caminhão munck e braço articulado", category: "Poda com munck" },
+  { src: "/images/munck2.jpeg", alt: "Poda de pinheiro com braço do munck ao lado de muro", category: "Poda com munck" },
+  { src: "/images/munck3.jpeg", alt: "Poda de palmeiras com cesto aéreo em via urbana", category: "Poda com cesto aéreo" },
+  { src: "/images/munck6.jpeg", alt: "Poda de pinheiro próximo à rede elétrica com garra do munck", category: "Poda com munck" },
+  { src: "/images/derrubada.jpeg", alt: "Remoção de árvores por equipe com EPIs em área pública", category: "Remoção" },
+  { src: "/images/rocada1.png", alt: "Roçada de gramado com roçadeira costal e EPIs", category: "Roçada" },
 ];
 
 const antesDepois = [
@@ -204,15 +198,15 @@ const antesDepois = [
     title: "Árvore sobre a rede elétrica → poda finalizada",
     before: rocada.url,
     after: limpeza.url,
-    beforeAlt: "Terreno com vegetação alta antes da roçada",
-    afterAlt: "Terreno limpo e organizado depois da roçada",
+    beforeAlt: "Pinheiro alto encostando na rede elétrica, com caminhão munck posicionado",
+    afterAlt: "Árvore após a poda, com o munck ao lado",
   },
   {
     title: "Terreno com mato alto → área roçada",
     before: podaAltura.url,
     after: podaEscalada.url,
-    beforeAlt: "Árvore alta encostando na rede elétrica antes da poda",
-    afterAlt: "Árvore podada com segurança após o serviço",
+    beforeAlt: "Terreno com vegetação densa e caminhão munck antes da limpeza",
+    afterAlt: "Terreno limpo após a remoção da vegetação",
   },
 ];
 
@@ -265,7 +259,7 @@ function Index() {
   }, []);
 
   return (
-    <div id="topo" className="min-h-screen bg-background">
+    <div id="topo" className="min-h-screen bg-background pb-[4.5rem] sm:pb-0">
       <Header />
       <FloatingWhatsApp />
 
@@ -301,14 +295,9 @@ function Index() {
                 <WhatsAppButton location="hero" size="xl">
                   Solicite um orçamento gratuito
                 </WhatsAppButton>
-                <WhatsAppButton
-                  location="hero_secundario"
-                  variant="outlineLight"
-                  size="xl"
-                  showIcon={false}
-                >
-                  Fale com um especialista
-                </WhatsAppButton>
+                <PhoneButton location="hero" variant="outlineLight" size="xl">
+                  Ligar agora
+                </PhoneButton>
               </div>
 
               <dl className="mt-8 grid gap-4 text-sm text-primary-foreground/90 sm:grid-cols-3 text-left">
@@ -401,7 +390,7 @@ function Index() {
             </h2>
           </header>
 
-          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {servicos.map((s) => (
               <li
                 key={s.title}

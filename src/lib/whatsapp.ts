@@ -11,3 +11,6 @@ export const WHATSAPP_MESSAGE =
 export const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(
   WHATSAPP_MESSAGE,
 )}`;
+
+
+export const PHONE_URL = `tel:+${WHATSAPP_NUMBER}`;

@@ -86,3 +86,18 @@ export function trackWhatsAppClick(location: string) {
     /* analytics nunca deve quebrar a navegação */
   }
 }
+
+/** Evento de conversão para cliques em ligar (separado do WhatsApp). */
+export function trackPhoneClick(location: string) {
+  const payload = { event: "phone_click", location, channel: "phone" };
+  try {
+    window.dataLayer?.push(payload);
+    window.gtag?.("event", "phone_click", {
+      event_category: "conversao",
+      event_label: location,
+    });
+    window.fbq?.("track", "Contact", { content_name: location, channel: "phone" });
+  } catch {
+    /* analytics nunca deve quebrar a navegação */
+  }
+}

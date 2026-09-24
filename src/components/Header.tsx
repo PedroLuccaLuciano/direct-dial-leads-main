@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import logo from "@/assets/logo-rs.png.asset.json";
+import { Phone } from "lucide-react";
+import { PHONE_URL } from "@/lib/whatsapp";
+import { trackPhoneClick } from "@/lib/analytics";
 import { WhatsAppButton } from "./WhatsAppButton";
 
 const links = [
@@ -52,10 +55,20 @@ export function Header() {
           ))}
         </nav>
 
-        <WhatsAppButton location="header" size="lg" className="shrink-0">
-          <span className="hidden sm:inline">Solicitar Orçamento</span>
-          <span className="sm:hidden">Orçamento</span>
-        </WhatsAppButton>
+        <div className="flex shrink-0 items-center gap-2">
+          <a
+            href={PHONE_URL}
+            onClick={() => trackPhoneClick("header")}
+            aria-label="Ligar para a RS Poda"
+            className="grid size-11 place-items-center rounded-md border-2 border-primary/30 text-primary transition-colors hover:bg-secondary sm:size-12"
+          >
+            <Phone aria-hidden="true" className="size-5" />
+          </a>
+          <WhatsAppButton location="header" size="lg">
+            <span className="hidden sm:inline">Solicitar Orçamento</span>
+            <span className="sm:hidden">Orçamento</span>
+          </WhatsAppButton>
+        </div>
       </div>
     </header>
   );
