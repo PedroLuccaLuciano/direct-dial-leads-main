@@ -15,6 +15,8 @@ import { Gallery, type GalleryItem } from "@/components/Gallery";
 import {
   Carousel,
   CarouselContent,
+  CarouselPrevious,
+  CarouselNext,
   CarouselItem,
 } from "@/components/ui/carousel";
 import { BeforeAfter } from "@/components/BeforeAfter";
@@ -138,6 +140,7 @@ const clientes = [
   { src: "/images/logo-arca.png", alt: "Arca", tall: true },
   { src: "/images/navalsul.png", alt: "Naval Sul", tall: true },
   { src: "/images/trg-logo.png", alt: "TRG" },
+  { src: "/images/farm-hill.png", alt: "Farm Hill", tall: true },
 ];
 
 const numeros = [
@@ -358,18 +361,20 @@ function Index() {
                     key={c.alt}
                     className="basis-1/2 sm:basis-1/3 lg:basis-1/5"
                   >
-                    <div className="flex h-24 items-center justify-center px-4">
+                    <div className="flex h-28 items-center justify-center px-4">
                       <img
                         src={c.src}
                         alt={c.alt}
                         loading="lazy"
                         decoding="async"
-                        className={`w-auto max-w-full object-contain ${c.tall ? "max-h-20" : "max-h-16"}`}
+                        className={`w-auto max-w-full object-contain ${c.tall ? "max-h-24" : "max-h-16"}`}
                       />
                     </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
+              <CarouselPrevious className="left-0 -translate-x-1/2" />
+              <CarouselNext className="right-0 translate-x-1/2" />
             </Carousel>
           </div>
         </section>
