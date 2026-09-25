@@ -18,7 +18,6 @@ export const MENSAGENS = {
   remocao: `${ABERTURA} de remoção de árvore. Vou enviar uma foto da árvore.`,
   rocada: `${ABERTURA} de roçada de terreno. Vou enviar uma foto do terreno.`,
   limpeza: `${ABERTURA} de limpeza e retirada de resíduos vegetais. Vou enviar uma foto do local.`,
-  munck: `${ABERTURA} de serviço com caminhão munck. Vou enviar os detalhes e uma foto do local.`,
 } as const;
 
 export const WHATSAPP_MESSAGE = MENSAGENS.geral;

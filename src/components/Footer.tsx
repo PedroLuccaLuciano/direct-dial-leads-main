@@ -2,7 +2,7 @@ import logo from "@/assets/logo-rs.png.asset.json";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { WHATSAPP_DISPLAY } from "@/lib/whatsapp";
 import { trackPhoneClick } from "@/lib/analytics";
-import { COMPANY, CIDADES } from "@/lib/company";
+import { COMPANY } from "@/lib/company";
 import { Clock, Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 
 export function Footer() {
@@ -18,7 +18,7 @@ export function Footer() {
 
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-3">
         <div>
           <img
             src={"/images/icone3.png"}
@@ -72,15 +72,6 @@ export function Footer() {
                   {s.label}
                 </a>
               </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h2 className="text-base font-bold">Área de atendimento</h2>
-          <ul className="mt-4 grid gap-2 text-sm text-primary-foreground/85">
-            {CIDADES.map((c) => (
-              <li key={c}>{c}</li>
             ))}
           </ul>
         </div>

@@ -24,7 +24,6 @@ import { MENSAGENS, WHATSAPP_DISPLAY, whatsappUrl } from "@/lib/whatsapp";
 import { COMPANY, CIDADES } from "@/lib/company";
 import podaAltura from "@/assets/poda-altura.jpeg.asset.json";
 import equipe from "@/assets/equipe.jpeg.asset.json";
-import munck from "@/assets/munck.jpeg.asset.json";
 import podaEscalada from "@/assets/poda-escalada.jpg.asset.json";
 import rocada from "@/assets/rocada.jpg.asset.json";
 import limpeza from "@/assets/limpeza.jpg.asset.json";
@@ -278,7 +277,7 @@ function Index() {
             <div className="mx-auto max-w-3xl text-center flex flex-col items-center">
               <p className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/25 bg-primary-foreground/10 px-4 py-2 text-xs font-semibold text-primary-foreground backdrop-blur sm:text-sm">
                 <span aria-hidden="true" className="size-2 shrink-0 rounded-full bg-accent" />
-                Atendemos Joinville, Araquari e cidades em um raio de até 40 km. Emergência: ligue.
+                Atendimento em Joinville e região. Emergência: ligue.
               </p>
 
               <h1 className="mt-5 text-3xl font-extrabold leading-[1.08] text-primary-foreground sm:text-5xl lg:text-6xl">
@@ -380,7 +379,7 @@ function Index() {
           <header className="max-w-2xl">
             <p className="text-sm font-bold uppercase tracking-widest text-accent-text">Serviços</p>
             <h2 className="mt-2 text-3xl font-extrabold text-primary sm:text-4xl">
-              Poda, remoção, roçada e munck em Joinville e Araquari
+              Poda, remoção e roçada em Joinville e Araquari
             </h2>
           </header>
 
@@ -464,41 +463,6 @@ function Index() {
             <WhatsAppButton location="apos_galeria" size="xl">
               Pedir orçamento no WhatsApp
             </WhatsAppButton>
-          </div>
-        </section>
-
-      
-
-
-
-        {/* MUNCK */}
-        <section id="munck" className="bg-secondary py-20">
-          <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2">
-            <img
-              src={munck.url}
-              alt="Caminhão munck da RS Poda com braço articulado em operação"
-              width={1000}
-              height={750}
-              loading="lazy"
-              decoding="async"
-              className="h-72 w-full rounded-2xl object-cover shadow-card lg:h-[26rem]"
-            />
-            <div>
-              <p className="text-sm font-bold uppercase tracking-widest text-accent-text">Munck</p>
-              <h2 className="mt-2 text-3xl font-extrabold text-primary sm:text-4xl">
-                Também realizamos serviços com Caminhão Munck
-              </h2>
-              <p className="mt-4 text-muted-foreground">
-                Além da poda de árvores, a RS Poda realiza movimentação de cargas,
-                instalação de containers, içamento de máquinas, estruturas metálicas e apoio para
-                obras.
-              </p>
-              <div className="mt-8">
-                <WhatsAppButton location="munck" size="xl" message={MENSAGENS.munck}>
-              Pedir orçamento no WhatsApp
-            </WhatsAppButton>
-              </div>
-            </div>
           </div>
         </section>
 

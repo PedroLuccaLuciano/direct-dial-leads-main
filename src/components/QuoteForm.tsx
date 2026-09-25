@@ -9,7 +9,6 @@ const SERVICOS = [
   "Remoção de árvore",
   "Roçada de terreno",
   "Limpeza e retirada de resíduos",
-  "Locação de munck",
 ];
 const QUANDO = ["Hoje", "Amanhã", "Esta semana", "Sem urgência"];
 const selectClass =

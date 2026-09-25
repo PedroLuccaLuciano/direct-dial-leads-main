@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Poda de árvores, roçada e locação de munck com equipe profissional e limpeza completa. Orçamento gratuito pelo WhatsApp.",
+          "Poda de árvores, remoção de árvores e roçada com equipe profissional e limpeza completa. Orçamento gratuito pelo WhatsApp.",
       },
       { name: "author", content: "RS Poda" },
       { name: "theme-color", content: "#1b4380" },
@@ -89,7 +89,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         property: "og:description",
         content:
-          "Poda de árvores, roçada e locação de munck com equipe profissional e limpeza completa.",
+          "Poda de árvores, remoção de árvores e roçada com equipe profissional e limpeza completa.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
